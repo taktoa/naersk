@@ -34,6 +34,7 @@ let
     [
       "${rust.toRustTarget stdenv.buildPlatform}"
       "wasm32-unknown-unknown"
+      "armv7-unknown-linux-gnueabihf"
     ]
     # on Linux we also build the musl target for fully static executables
     ++ lib.optionals stdenv.isLinux [ "x86_64-unknown-linux-musl" ]
